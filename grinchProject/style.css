@@ -1,0 +1,149 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(#00ff006c, #ff00007f);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    padding: 1em 2em 1em 1em;
+
+}
+
+.card {
+    width: 19em;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 10px;
+    color: whitesmoke;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        width: 7.5em;
+        height: 7.5em;
+        border-radius: 50%;
+        background: #f9f9fb;
+        position: absolute;
+        top: -8.5%;
+        left: -8.5%;
+        box-shadow: 0px 0px 100px rgba(241, 119, 119, 0.8),
+          0px 0px 100px rgba(211, 42, 42, 0.8), inset #fc4040 0px 0px 40px -12px;
+        transition: 0.4s ease-in-out;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(#5b5b5b, transparent, transparent);
+        transform: translate(-5px, 250px);
+        transition: 0.4s ease-in-out;
+      
+      }
+     
+    
+     
+   
+      
+      &:hover {
+        &::after {
+          box-shadow: 0px 0px 200px rgb(241, 119, 119),
+            0px 0px 200px rgb(211, 45, 42), inset #fc4040 0px 0px 40px -12px;
+            scale: 2;
+        }
+}
+
+
+
+.image{
+ 
+  
+    height: 150px;
+    object-fit: contain;
+  
+    
+    padding: 2px; /* Este es el "ancho" del borde gradiente */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.32s ease-in-out;
+    background-clip: border-box; /* El gradiente se limita al borde */
+    text-align: end;
+
+
+   
+
+   
+
+
+
+
+    .icons{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+       
+
+       
+    }
+
+    
+}
+
+.icon{
+    color: #c1c1c1;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.32s ease-in-out;
+
+    &:hover{
+        transform: scale(1.2);
+        color: white;
+    }
+}
+
+
+
+
+
+@keyframes move{
+    0%{
+        transform: translateX(0);
+    }
+
+    25%{
+        transform: translateX(-1em) translateY(-1em);
+        rotate: -10deg;
+    }   
+
+    50%{
+        transform: translateX(-1em) translateY(-1em);
+    }
+
+    75%{
+        transform: translateX(-1.25em) translateY(-1em);
+        rotate: 10deg;
+    }   
+    100%{
+        transform: translateX(0);
+        transform: translateX(0em) translateY(0em);
+    }
+}
+
